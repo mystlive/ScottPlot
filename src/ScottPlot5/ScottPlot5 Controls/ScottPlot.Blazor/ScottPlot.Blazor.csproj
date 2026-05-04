@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 
     <PropertyGroup>
-        <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+        <TargetFrameworks>net8.0</TargetFrameworks>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <LangVersion>11</LangVersion>
@@ -34,6 +34,8 @@
         <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
 
         <NoWarn>NU1701, CS1591, CS1587, CS1573, CS1572, CS1570, CS1574, CS1584</NoWarn>
+
+        <Platforms>AnyCPU;x64</Platforms>
 
     </PropertyGroup>
 

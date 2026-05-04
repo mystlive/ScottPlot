@@ -6,6 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <SignAssembly>True</SignAssembly>
         <AssemblyOriginatorKeyFile>../../Key.snk</AssemblyOriginatorKeyFile>
+        <Platforms>AnyCPU;x64</Platforms>
     </PropertyGroup>
 
     <ItemGroup>

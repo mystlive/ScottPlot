@@ -15,6 +15,7 @@
         <!-- package restored using non-identical framework -->
         <NoWarn>NU1701</NoWarn>
         <ApplicationIcon>scottplot-icon-rounded-border.ico</ApplicationIcon>
+        <Platforms>AnyCPU;x64</Platforms>
 
     </PropertyGroup>
 
@@ -23,7 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\ScottPlot5 Controls\ScottPlot.OpenGL\ScottPlot.OpenGL.csproj"/>
+        <ProjectReference Include="..\..\ScottPlot5 Controls\ScottPlot.OpenGL\ScottPlot.OpenGL.csproj" />
         <ProjectReference Include="..\..\ScottPlot5 Controls\ScottPlot.WinForms\ScottPlot.WinForms.csproj" />
         <ProjectReference Include="..\..\ScottPlot5 Cookbook\ScottPlot Cookbook.csproj" />
         <ProjectReference Include="..\..\ScottPlot5\ScottPlot.csproj" />

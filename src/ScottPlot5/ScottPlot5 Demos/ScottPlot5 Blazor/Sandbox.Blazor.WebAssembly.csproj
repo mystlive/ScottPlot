@@ -8,10 +8,15 @@
         <SignAssembly>True</SignAssembly>
         <AssemblyOriginatorKeyFile>../../Key.snk</AssemblyOriginatorKeyFile>
         <GenerateStaticWebAssetsEndpointsManifest>true</GenerateStaticWebAssetsEndpointsManifest>
+        <Platforms>AnyCPU;x64</Platforms>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
         <Optimize>True</Optimize>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      <Optimize>True</Optimize>
     </PropertyGroup>
 
     <ItemGroup>

@@ -7,6 +7,7 @@
         <SignAssembly>false</SignAssembly>
         <WasmNativeStrip>false</WasmNativeStrip>
         <GenerateStaticWebAssetsEndpointsManifest>true</GenerateStaticWebAssetsEndpointsManifest>
+        <Platforms>AnyCPU;x64</Platforms>
     </PropertyGroup>
 
     <ItemGroup>

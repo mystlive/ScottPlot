@@ -12,6 +12,7 @@
         <SignAssembly>True</SignAssembly>
         <AssemblyOriginatorKeyFile>../../Key.snk</AssemblyOriginatorKeyFile>
         <ApplicationManifest>app.manifest</ApplicationManifest>
+        <Platforms>AnyCPU;x64</Platforms>
     </PropertyGroup>
 
     <ItemGroup>

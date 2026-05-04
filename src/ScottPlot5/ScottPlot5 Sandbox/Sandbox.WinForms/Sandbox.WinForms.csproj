@@ -18,6 +18,7 @@
         <SignAssembly>True</SignAssembly>
         <LangVersion>Latest</LangVersion>
         <AssemblyOriginatorKeyFile>../../Key.snk</AssemblyOriginatorKeyFile>
+        <Platforms>AnyCPU;x64</Platforms>
     </PropertyGroup>
 
     <ItemGroup>

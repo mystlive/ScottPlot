@@ -10,6 +10,7 @@
         <Configuration>Release</Configuration>
         <IsPackable>false</IsPackable>
         <SignAssembly>False</SignAssembly>
+        <Platforms>AnyCPU;x64</Platforms>
     </PropertyGroup>
 
     <ItemGroup>

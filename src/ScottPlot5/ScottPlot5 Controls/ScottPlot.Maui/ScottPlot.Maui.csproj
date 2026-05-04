@@ -11,8 +11,8 @@
         <EnableWindowsTargeting>true</EnableWindowsTargeting>
 
         <!-- Target Platforms -->
-        <TargetFrameworks>net10.0;net10.0-android;net10.0-ios;net10.0-maccatalyst</TargetFrameworks>
-        <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net10.0-windows10.0.19041.0</TargetFrameworks>
+        <TargetFrameworks>net8.0</TargetFrameworks>
+        <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks)</TargetFrameworks>
         <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
         <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
         <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
@@ -48,6 +48,7 @@
         <NoWarn>CS1591, CS8002</NoWarn>
         <SignAssembly>True</SignAssembly>
         <AssemblyOriginatorKeyFile>../../Key.snk</AssemblyOriginatorKeyFile>
+        <Platforms>AnyCPU;x64</Platforms>
     </PropertyGroup>
 
     <!-- Include additional files for the NuGet package -->

@@ -10,6 +10,7 @@
         <SignAssembly>False</SignAssembly>
         <Copyright>Copyright (c) Scott Harden / Harden Technologies, LLC</Copyright>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Platforms>AnyCPU;x64</Platforms>
     </PropertyGroup>
 
     <ItemGroup>

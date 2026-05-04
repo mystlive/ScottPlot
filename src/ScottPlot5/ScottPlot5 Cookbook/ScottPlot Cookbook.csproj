@@ -9,6 +9,7 @@
         <LangVersion>12</LangVersion>
         <SignAssembly>True</SignAssembly>
         <AssemblyOriginatorKeyFile>../Key.snk</AssemblyOriginatorKeyFile>
+        <Platforms>AnyCPU;x64</Platforms>
     </PropertyGroup>
 
     <ItemGroup>

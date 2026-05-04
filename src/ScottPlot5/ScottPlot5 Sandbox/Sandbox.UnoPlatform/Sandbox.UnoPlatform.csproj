@@ -19,6 +19,8 @@
         <AssemblyOriginatorKeyFile>../../Key.snk</AssemblyOriginatorKeyFile>
 
         <NoWarn>WMC9999</NoWarn>
+
+        <Platforms>AnyCPU;x64</Platforms>
     </PropertyGroup>
 
     <ItemGroup>

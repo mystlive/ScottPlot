@@ -1,4 +1,5 @@
 /src/ScottPlot5/BenchmarkDotNet.Artifacts
+/.agents/
 /dev/www/metrics
 *.Metrics.xml
 /dev/www/cookbook

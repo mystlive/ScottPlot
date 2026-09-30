@@ -1,6 +1,6 @@
 namespace ScottPlot.Plottables;
 
-public class LollipopPlot : IPlottable, IHasLine, IHasMarker
+public class LollipopPlot : IPlottable, IHasLine, IHasMarker, IGetNearest
 {
     public bool IsVisible { get; set; } = true;
 
@@ -43,6 +43,8 @@ public class LollipopPlot : IPlottable, IHasLine, IHasMarker
 
     public Orientation Orientation { get; set; } = Orientation.Vertical;
 
+    public double BaseValue { get; set; } = 0;
+
     public LollipopPlot(IEnumerable<Coordinates> coordinates)
     {
         Coordinates = coordinates;
@@ -53,11 +55,25 @@ public class LollipopPlot : IPlottable, IHasLine, IHasMarker
         return new AxisLimits(Coordinates);
     }
 
+    public DataPoint GetNearest(Coordinates mouseLocation, RenderDetails renderInfo, float maxDistance = 15)
+    {
+        DataSources.CoordinateDataSource dataSource = new(Coordinates.ToList());
+        return DataSourceUtilities.GetNearest(dataSource, mouseLocation, renderInfo, maxDistance, Axes.XAxis, Axes.YAxis);
+    }
+
+    public DataPoint GetNearestX(Coordinates mouseLocation, RenderDetails renderInfo, float maxDistance = 15)
+    {
+        DataSources.CoordinateDataSource dataSource = new(Coordinates.ToList());
+        return DataSourceUtilities.GetNearestX(dataSource, mouseLocation, renderInfo, maxDistance, Axes.XAxis);
+    }
+
     public virtual void Render(RenderPack rp)
     {
         foreach (Coordinates c in Coordinates)
         {
-            Coordinates lineBase = (Orientation == Orientation.Vertical) ? new(c.X, 0) : new(0, c.Y);
+            Coordinates lineBase = (Orientation == Orientation.Vertical)
+                ? new(c.X, BaseValue)
+                : new(BaseValue, c.Y);
             Coordinates lineTip = c;
             CoordinateLine line = new(lineBase, lineTip);
             PixelLine pxLine = Axes.GetPixelLine(line);

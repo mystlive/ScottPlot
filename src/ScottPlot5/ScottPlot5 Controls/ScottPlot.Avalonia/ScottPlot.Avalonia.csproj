@@ -10,7 +10,7 @@
 
         <!-- NuGet info -->
         <PackageId>ScottPlot.Avalonia</PackageId>
-        <Version>5.1.59</Version>
+        <Version>5.1.60</Version>
         <Authors>Scott Harden</Authors>
         <Company>Harden Technologies, LLC</Company>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -51,8 +51,8 @@
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Avalonia" Version="11.3.4" />
-        <PackageReference Include="Avalonia.Skia" Version="11.3.4" />
+        <PackageReference Include="Avalonia" Version="12.0.0" />
+        <PackageReference Include="Avalonia.Skia" Version="12.0.0" />
         <ProjectReference Include="..\..\ScottPlot5\ScottPlot.csproj" />
     </ItemGroup>
 </Project>
